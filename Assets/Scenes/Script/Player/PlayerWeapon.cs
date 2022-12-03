@@ -12,6 +12,7 @@ public class PlayerWeapon : MonoBehaviour
     public float magn, rough, fadeIn, fadeOut;
     Vector3 posInf = new Vector3(0.25f, 0.25f, 0.25f);
     Vector3 rotInf = new Vector3(1, 1, 1);
+    int weapon_Mode =1;
 
     [Header("WeaponEffect")]
     [SerializeField] ParticleSystem weapon_Effect;
@@ -22,11 +23,42 @@ public class PlayerWeapon : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire") && Time.time >= nexttime_ToFire)
+        /*
+         * OBJECTIVE:
+         * Create a condition where the player can chage weapon state(rapid fire and single fire)
+         * 
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            weapon_Mode++;
+            if (weapon_Mode == 2)
+            {
+                weapon_Mode = 0;
+            }
+        }
+
+        switch (weapon_Mode)
+        {
+            case 0:
+                if (Input.GetButtonDown("Fire") && Time.time >= nexttime_ToFire)
+                {
+                    nexttime_ToFire = Time.time + 1f / stats_WeaponFireRate;
+                    Shoot();
+                }
+                break;
+            case 1:
+                if (Input.GetButton("Fire") && Time.time >= nexttime_ToFire)
+                {
+                    nexttime_ToFire = Time.time + 1f / stats_WeaponFireRate;
+                    Shoot();
+                }
+                break;
+                
+        }
+        /*if (Input.GetButtonDown("Fire") && Time.time >= nexttime_ToFire)
         {
             nexttime_ToFire = Time.time + 1f / stats_WeaponFireRate;
             Shoot();
-        }
+        }*/
     }
 
     void Shoot()

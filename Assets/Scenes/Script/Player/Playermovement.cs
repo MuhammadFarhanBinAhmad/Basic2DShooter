@@ -29,10 +29,16 @@ public class Playermovement : MonoBehaviour
     }
     void Movement()
     {
-        float m_HorizontalMovement = Input.GetAxisRaw("Horizontal");
+        //OBJECTIVE: Create player movement
+        /*
+         * One can assign the variable to function. Do have an idea on how to do it?
+         * You need 2 float variable for vertical and horizontal movement
+         * then use transform.position to move the player
+         */
+        /*float m_HorizontalMovement = Input.GetAxisRaw("Horizontal");
         float m_VerticalMovement = Input.GetAxisRaw("Vertical");
 
-        transform.position += new Vector3(m_HorizontalMovement, m_VerticalMovement, 0) * s_Movement * Time.fixedDeltaTime;
+        transform.position += new Vector3(m_HorizontalMovement, m_VerticalMovement, 0) * s_Movement * Time.fixedDeltaTime;*/
 
     }
 }

@@ -9,16 +9,21 @@ public class EnemyHealth : MonoBehaviour
     [Header("Effects")]
     [SerializeField] GameObject effect_Explosion;
     
-    internal void TakingDamage(float dmg)
+    //OBJECTIVE:
+    //Create a function call TakingDamage which takes in a float paramater
+    /*Whats needed:
+     * The paramater "dmg" contain the value that the enemy will take damage
+     * Use this value as the amount of damage the enemy will take
+     * There is a also a visual effect call effect_Explosion has been set. Spawn this object when the enemy has ran out of health
+     */
+    public void TakingDamage(float dmg)
     {
-        if (health > 0)
-        {
-            health -= dmg;
-        }
-        if (health <= 0)
-        {
-            GameObject E = Instantiate(effect_Explosion, transform.position, transform.rotation);
-            Destroy(gameObject);
-        }
+        /*
+         * if (enemy health > 0)
+         * enemy health -  dmg
+         * else
+         * destroy enemy
+         * Spawn effect
+         */
     }
 }

@@ -16,13 +16,15 @@ public class Projectile : MonoBehaviour
         the_RB.velocity = transform.up * bullet_Speed;
     }
 
+
+    //OBJECTIVE: LEARN ABOUT HOW TO USE COLLIDER
     private void OnTriggerEnter2D(Collider2D other)
     {
-        GameObject e = Instantiate(effect_Hit, transform.position, effect_Hit.transform.rotation);
+       /* GameObject e = Instantiate(effect_Hit, transform.position, effect_Hit.transform.rotation);
         if (other.GetComponent<EnemyHealth>())
         {
             other.GetComponent<EnemyHealth>().TakingDamage(bullet_Damage);
             Destroy(gameObject);
-        }
+        }*/
     }
 }
